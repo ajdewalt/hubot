@@ -1,128 +1,57 @@
 ---
-permalink: /docs/
+layout: page
+permalink: /
+order: 0
+headings:
+    - title: Motivation
+    - title: Requirements
+    - title: Installation
+    - title: Getting Help
 ---
 
-## Getting Started With Hubot
+So you want to get started with ChatOps using Hubot and Slack? We've got you covered. {{ site.product_name }} is an
+adapter that connects your Hubot scripts to your Slack team, giving you and your fellow DevOps engineers a new best friend: your very own ChatOps bot.
 
-You will need [node.js and npm](https://docs.npmjs.com/getting-started/installing-node). Once those are installed, we can install the hubot generator:
+## Requirements and Installation
 
-    %  npm install -g yo generator-hubot
+Of course, you'll need Node.js, as well as NPM. NPM has
+[a great tutorial](https://docs.npmjs.com/getting-started/installing-node) to help you get started if you don't have
+these tools installed. [Yeoman](http://yeoman.io) is also a great tool for getting started on your first Hubot.
 
-This will give us the `hubot` [yeoman](http://yeoman.io/) generator. Now we
-can make a new directory, and generate a new instance of hubot in it. For example, if
-we wanted to make a bot called myhubot:
+To install, you will first want to create a new Hubot project. The simplest way is to use your computer's terminal app
+to invoke Yeoman.
 
-
-    % mkdir myhubot
-    % cd myhubot
-    % yo hubot
-
-At this point, you'll be asked a few questions about who is creating the bot,
-and which [adapter](adapters.md) you'll be using. Adapters are hubot's
-way of integrating with different chat providers.
-
-If you are using git, the generated directory includes a .gitignore, so you can
-initialize and add everything:
-
-    % git init
-    % git add .
-    % git commit -m "Initial commit"
-
-If you'd prefer to automate your hubot build without being interactively
-prompted for its configuration, you can add the following options
-to the `yo hubot` command to do so:
-
-| Option                                      | Description                                            |
-|:--------------------------------------------|:-------------------------------------------------------|
-| `--owner="Bot Wrangler <bw@example.com>"`   | Bot owner, e.g. "Bot Wrangler <bw@example.com>"        |
-| `--name="Hubot"`                            | Bot name, e.g. "Hubot"                                 |
-| `--description="Delightfully aware robutt"` | Bot description, e.g. "Delightfully aware robutt"      |
-| `--adapter=campfire`                        | Bot adapter, e.g. "campfire"                           |
-| `--defaults`                                | Declare all defaults are set and no prompting required |
-
-You now have your own functional hubot! There's a `bin/hubot`
-command for convenience, to handle installing npm dependencies, loading scripts,
-and then launching your hubot.
-
-Hubot needs Redis to persist data, so before you can start hubot on your own computer, you should have Redis installed on your localhost. If just want to test Hubot without Redis, then you can remove `hubot-redis-brain` from `external-scripts.json`.
-
-    % bin/hubot
-    Hubot>
-
-This starts hubot using the [shell adapter](./adapters/shell.md), which
-is mostly useful for development. Make note of the name in the `hubot>` prompt;
-this is the name your hubot will respond to with commands. If the prompt
-reads `myhubot>` then your commands must start with `myhubot <command>`
-
-For example, to list available commands:
-
-    % bin/hubot
-    myhubot> myhubot help
-    myhubot> Shell: myhubot adapter - Reply with the adapter
-    myhubot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
-    myhubot echo <text> - Reply back with <text>
-    myhubot help - Displays all of the help commands that Hubot knows about.
-    myhubot help <query> - Displays all help commands that match <query>.
-    myhubot image me <query> - The Original. Queries Google Images for <query> and returns a random top result.
-    myhubot map me <query> - Returns a map view of the area returned by `query`.
-    myhubot mustache me <url|query> - Adds a mustache to the specified URL or query result.
-    myhubot ping - Reply with pong
-    myhubot pug bomb N - get N pugs
-    myhubot pug me - Receive a pug
-    myhubot the rules - Make sure hubot still knows the rules.
-    myhubot time - Reply with current time
-    myhubot translate me <phrase> - Searches for a translation for the <phrase> and then prints that bad boy out.
-    myhubot translate me from <source> into <target> <phrase> - Translates <phrase> from <source> into <target>. Both <source> and <target> are optional
-    ship it - Display a motivation squirrel
-
-You almost definitely will want to change your hubot's name to add character. bin/hubot takes a `--name`:
-
-    % bin/hubot --name sam
-    sam>
-
-Your hubot will now respond as `sam`. This is
-case-insensitive, and can be prefixed with `@` or suffixed with `:`. These are equivalent:
-
-    SAM help
-    sam help
-    @sam help
-    sam: help
-
-## Scripts
-
-Hubot's power comes through scripts. There are hundreds of scripts written and maintained by the community. Find them by searching the [NPM registry](https://www.npmjs.com/browse/keyword/hubot-scripts) for `hubot-scripts <your-search-term>`. For example:
-
-```
-$ npm search hubot-scripts github
-NAME                  DESCRIPTION
-hubot-deployer        Giving Hubot the ability to deploy GitHub repos to PaaS providers hubot hubot-scripts hubot-gith
-hubot-gh-release-pr   A hubot script to create GitHub's PR for release
-hubot-github          Giving Hubot the ability to be a vital member of your github organization
-…
+```bash
+npm install -g yo generator-hubot
 ```
 
-To use a script from an NPM package:
+This will install the Yeoman Hubot generator. Now we can create that Hubot project:
 
-1. Run `npm install --save <package-name>` to add the package as a dependency and install it.
-2. Add the package to `external-scripts.json`.
-3. Run `npm home <package-name>` to open a browser window for the homepage of the script, where you can find more information about configuring and installing the script.
+```bash
+mkdir my-awesome-hubot && cd my-awesome-hubot
+yo hubot --adapter=slack
+```
 
-You can also put your own scripts under the `scripts/` directory. All scripts placed there are automatically loaded and ready to use with your hubot. Read more about customizing hubot by [writing your own scripts](scripting.md).
+This script will prompt you to describe the app you are going to build, and create a file that NPM can use to help
+manage your project.
 
-## Adapters
+You will also need to set up a Custom Bot on your Slack team. This will create a token that your hubot can use to
+log into your team as a bot. Visit the [Custom Bot creation page](https://my.slack.com/apps/A0F7YS25R-bots) to register
+your bot with your Slack team, and to retrieve a new bot token
 
-Hubot uses the adapter pattern to support multiple chat-backends. Here is a [list of available adapters](adapters.md), along with details on how to configure them.
+## Running Hubot
 
-## Deploying
+Once you've got your bot set up as you like, you can run your hubot with the run script included (being sure to
+copy-and-paste your token in!):
 
-You can deploy hubot to Heroku, which is the officially supported method.
-Additionally you are able to deploy hubot to a UNIX-like system or Windows.
-Please note the support for deploying to Windows isn't officially supported.
+```bash
+HUBOT_SLACK_TOKEN=xoxb-YOUR-TOKEN-HERE ./bin/hubot --adapter slack
+```
 
-* [Deploying Hubot onto Heroku](./deploying/heroku.md)
-* [Deploying Hubot onto UNIX](./deploying/unix.md)
-* [Deploying Hubot onto Windows](./deploying/windows.md)
+## Getting Help
 
-## Patterns
+If you get stuck, we're here to help. The following are the best ways to get assistance working through your issue:
 
-Using custom scripts, you can quickly customize Hubot to be the most life embettering robot he or she can be. Read [docs/patterns.md](patterns.md) for some nifty tricks that may come in handy as you teach your hubot new skills.
+  * [Issue Tracker](http://github.com/slackapi/{{ site.repo_name }}/issues) for reporting bugs or requesting features.
+  * [dev4slack channel](https://dev4slack.slack.com/archives/{{ site.dev4slack_channel }}) for getting help using
+  {{ site.product_name }} or just generally commiserating with your fellow developers.
