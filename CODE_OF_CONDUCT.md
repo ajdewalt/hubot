@@ -1,46 +1,34 @@
-# Contributor Covenant Code of Conduct
+# Slack open source code of conduct
 
-## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+## Introduction
+Diversity and inclusion make our community strong. We encourage participation from the most varied and diverse backgrounds possible and want to be very clear about where we stand.
 
-## Our Standards
+Our goal is to maintain a safe, helpful and friendly community for everyone, regardless of experience, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, nationality, or other defining characteristic.
 
-Examples of behavior that contributes to creating a positive environment include:
+This code and related procedures also apply to unacceptable behavior occurring outside the scope of community activities, in all community venues (online and in-person) as well as in all one-on-one communications, and anywhere such behavior has the potential to adversely affect the safety and well-being of community members.
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+## Expected Behavior
+  * Be welcoming.
+  * Be kind.
+  * Look out for each other.
 
-Examples of unacceptable behavior by participants include:
+## Unacceptable Behavior
+  * Conduct or speech which might be considered sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory or offensive in nature.
+  * Unwelcome, suggestive, derogatory or inappropriate nicknames or terms.
+  * Disrespect towards others. (Jokes, innuendo, dismissive attitudes.)
+  * Intimidation or harassment (online or in-person). Please read the [Citizen Code of Conduct](http://citizencodeofconduct.org/) for how we interpret harassment. 
+  * Disrespect towards differences of opinion.
+  * Inappropriate attention or contact. Be aware of how your actions affect others. If it makes someone uncomfortable, stop.
+  * Not understanding the differences between constructive criticism and disparagement.
+  * Sustained disruptions.
+  * Violence, threats of violence or violent language.
 
-* The use of sexualized language or imagery and unwelcome sexual attention or advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a professional setting
+## Enforcement 
+Understand that speech and actions have consequences, and unacceptable behavior will not be tolerated.
 
-## Our Responsibilities
+If you are the subject of, or witness to any violations of this Code of Conduct, please contact us by submitting a form [here](https://docs.google.com/a/slack-corp.com/forms/d/1NVqj2S2Q49XVIOT5N3L6Tx1oihvk9CpMa_UX8T_6ESo/viewform), or email conduct@slack.com.
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+If violations occur, organizers will take any action they deem appropriate for the infraction, up to and including expulsion.
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
-
-## Scope
-
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
-
-## Enforcement
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at support@github.com. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
-
-## Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
-
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+_Thanks to the [Django Code of Conduct](https://www.djangoproject.com/conduct/), [The Citizen Code of Conduct](http://citizencodeofconduct.org/), [The Rust Code of Conduct](https://www.rust-lang.org/conduct.html) and [The Ada Initiative](http://adainitiative.org/2014/02/18/howto-design-a-code-of-conduct-for-your-community/)._
